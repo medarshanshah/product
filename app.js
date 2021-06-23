@@ -20,7 +20,7 @@ const swaggerOptions = {
             contact: {
                 name: "Darshan"
             },
-            servers: ['jttp://localhost:4000']
+            servers: ['http://localhost:4000']
         }
 
     },

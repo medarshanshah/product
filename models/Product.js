@@ -13,7 +13,8 @@ const productSchema = new mongoose.Schema({
     description:String,
     image:String,
     category:String,
-    type:String
+    type:String,
+    freeDelivery: Boolean
 })
 
 const Product = mongoose.model('product', productSchema);
