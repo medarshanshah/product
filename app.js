@@ -34,17 +34,15 @@ app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(swaggerDocs))
 // Atlas Database Connection
 const dbURI = process.env.MONGODB_URI
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex:true })
-.then((result) => {
-    app.listen(PORT, console.log('Listening to product service at port '+PORT))
-})
-.catch((err) => console.log(err));
 
 // Routes
 app.use(productRoutes)
 
 
-
+app.listen(PORT, console.log('Listening to product service at port '+PORT))
 
 // app.get('/product/:id/cart',(req,res) => {
 //     res.send(req.params.id)
 // })
+
+module.exports = app
